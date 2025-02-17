@@ -1,0 +1,23 @@
+.Card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 55px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
+
+.Card p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 15
+}

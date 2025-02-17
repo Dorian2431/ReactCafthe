@@ -1,0 +1,50 @@
+.pagedeco {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-top: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50%;
+    overflow: hidden;
+    position: relative; /* IMPORTANT : Permet au logo de se positionner correctement */
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo-container img {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px; /* Ajuste la taille du logo */
+    height: auto;
+}
+
+.mdp {
+    margin-right: 80px;
+}
+
+.texte {
+    margin-top: 5px;
+    height: 20px;
+}
+
+.bouton {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 130px;
+    height: 30px;
+}
+
+.mdp:hover {
+    color: #a905ff;
+}
+
+.compte:hover {
+    color: #a905ff;
+}
