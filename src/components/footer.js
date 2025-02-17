@@ -8,40 +8,84 @@ function Footer() {
       <img className="img" src={"/footer.png"} alt="Description de l'image" />
       <div className="footer2">
         <div>
-          {/* Logo */}
+          <img
+            className="logo"
+            src={"/logoco.png"}
+            alt="Description de l'image"
+          />
           <div>
-            <a href="#">Mention Légale</a>
-            <a href="#">Politique de confidentialité</a>
+            <a className="lien" href="#">
+              <b>Mention Légale</b>
+            </a>
+            <br></br>
+            <a className="lien" href="#">
+              <b>Politique de confidentialité</b>
+            </a>
           </div>
         </div>
 
         <div>
-          {/* Symbole */}
-          <p>Adresse</p>
-          <p>18 rue de la motte de beurre</p>
-
-          {/* Symbole */}
-          <p>Téléphone</p>
-          <p>06 07 08 09 010</p>
-
-          {/* Symbole */}
-          <p>Adresse-Mail</p>
-          <p>Caf.the@gmail.com</p>
+          <h2 className="contact">Contact</h2>
+          <div>
+            {/* Symbole */}
+            <p className="titre">
+              <b>Adresse</b>
+            </p>{" "}
+            <p className="nom">
+              <b>18 rue de la motte de beurre</b>
+            </p>
+          </div>
+          <div>
+            {/* Symbole */}
+            <p className="titre">
+              <b>Téléphone</b>
+            </p>
+            <p>
+              <b>06 07 08 09 010</b>
+            </p>
+          </div>
         </div>
 
         {/* Réseaux sociaux */}
         <div className="rs1">
-          <p>Suivez-nous sur nos réseaux sociaux :</p>
-          <div className="rs">
-            <a href="#" className="text-green-400 text-xl hover:text-green-300">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="text-green-400 text-xl hover:text-green-300">
-              <FaInstagram />
-            </a>
-            <a href="#" className="text-green-400 text-xl hover:text-green-300">
-              <FaTwitter />
-            </a>
+          <h2 className="r">.</h2>
+          <div>
+            {/* Symbole */}
+            <p className="titre">
+              <b>Adresse-Mail</b>
+            </p>
+            <p>
+              <b>Caf.the@gmail.com</b>
+            </p>
+          </div>
+          <p>
+            <b>Suivez-nous sur nos réseaux sociaux :</b>
+          </p>
+          <div>
+            <div className="rs">
+              <a
+                href="#"
+                className="text-green-400 text-xl hover:text-green-300"
+              >
+                <FaFacebookF />
+              </a>
+            </div>
+            <div className="rs">
+              <a
+                href="#"
+                className="text-green-400 text-xl hover:text-green-300"
+              >
+                <FaInstagram />
+              </a>
+            </div>
+            <div className="rs">
+              <a
+                href="#"
+                className="text-green-400 text-xl hover:text-green-300"
+              >
+                <FaTwitter />
+              </a>
+            </div>
           </div>
         </div>
       </div>

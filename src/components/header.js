@@ -4,6 +4,8 @@ import "../styles/header.css";
 function Header(props) {
   return (
     <div className="head">
+      <div className="calque"></div>
+      <img className="ima" src={"/head.jpg"} alt="Description de l'image" />
       <div className="logo">
         <img
           src="/logov1.png"

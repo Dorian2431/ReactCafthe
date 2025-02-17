@@ -4,6 +4,7 @@ import Skeleton from "react-loading-skeleton";
 import Card from "../components/Card";
 import filter from "../components/filter";
 import "react-loading-skeleton/dist/skeleton.css";
+import "../styles/ProductList.css";
 
 function ProductList(props) {
   const [produits, setProduits] = useState([]);
@@ -47,7 +48,9 @@ function ProductList(props) {
 
   return (
     <div>
-      <h3>Liste des produits</h3>
+      <div className="ttitre">
+        <h3>Liste des produits</h3>
+      </div>
       <div className="product-list">
         {produits.map((produit) => (
           <Card
