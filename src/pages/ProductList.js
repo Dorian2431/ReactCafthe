@@ -63,10 +63,4 @@ function ProductList(props) {
   );
 }
 
-/* const filtreproduit = async () => {
-  fetch(`http://localhost:3001/categorie/${id_categorie}`).then((response) =>
-    response(),
-  );
-}; */
-
 export default ProductList;
