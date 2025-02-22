@@ -1,13 +1,20 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import "../styles/footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faMapLocation,
+  faPhoneVolume,
+  faTurnDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
     <footer className="footer">
       <img className="img" src={"/footer.png"} alt="Description de l'image" />
       <div className="footer2">
-        <div>
+        <div className="test">
           <img
             className="logo"
             src={"/logoco.png"}
@@ -29,7 +36,10 @@ function Footer() {
           <div>
             {/* Symbole */}
             <p className="titre">
-              <b>Adresse</b>
+              <b>
+                {" "}
+                <FontAwesomeIcon icon={faMapLocation} /> Adresse
+              </b>
             </p>{" "}
             <p className="nom">
               <b>18 rue de la motte de beurre</b>
@@ -38,7 +48,10 @@ function Footer() {
           <div>
             {/* Symbole */}
             <p className="titre">
-              <b>Téléphone</b>
+              <b>
+                {" "}
+                <FontAwesomeIcon icon={faPhoneVolume} /> Téléphone{" "}
+              </b>
             </p>
             <p>
               <b>06 07 08 09 010</b>
@@ -52,14 +65,19 @@ function Footer() {
           <div>
             {/* Symbole */}
             <p className="titre">
-              <b>Adresse-Mail</b>
+              <b>
+                <FontAwesomeIcon icon={faEnvelope} /> Adresse-Mail
+              </b>
             </p>
             <p>
               <b>Caf.the@gmail.com</b>
             </p>
           </div>
-          <p>
-            <b>Suivez-nous sur nos réseaux sociaux :</b>
+          <p className="titre">
+            <b>
+              <FontAwesomeIcon icon={faTurnDown} /> Suivez-nous sur nos réseaux
+              sociaux :
+            </b>
           </p>
           <div>
             <div className="rs">

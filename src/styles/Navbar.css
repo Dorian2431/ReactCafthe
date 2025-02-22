@@ -1,0 +1,30 @@
+.bloc {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.blocs {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    border: solid black;
+
+}
+
+.color {
+    color: green;
+    text-align: center;
+    font-size: 20px;
+}
+
+.lienn {
+    margin-right: 300px;
+    justify-content: space-between;
+    font-size: large;
+    color: blue;
+}
+
+.lienn:hover {
+    color: green;
+}

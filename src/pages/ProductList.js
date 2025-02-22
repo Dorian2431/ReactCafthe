@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import Card from "../components/Card";
-import filter from "../components/filter";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../styles/ProductList.css";
 
 function ProductList(props) {
   const [produits, setProduits] = useState([]);
   const [isloading, setisloading] = useState(true);
-
   useEffect(() => {
     const fetchProduits = async () => {
       try {

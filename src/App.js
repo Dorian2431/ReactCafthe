@@ -6,7 +6,6 @@ import Home from "./pages/home";
 import ProductDetails from "./pages/ProductDetails";
 import { AuthProvider } from "./contexte/AuthContext";
 import Login from "./pages/Login";
-
 function App() {
   return (
     <AuthProvider>
