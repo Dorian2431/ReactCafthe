@@ -1,0 +1,60 @@
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HautProducteur {
+    background-color: rgb(217, 217, 217, 0.5);
+    border-radius: 40px;
+    max-width: 1300px;
+    height: 500px;
+    text-align: center;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.titreProducteur {
+    margin-bottom:100px;
+    font-size: 45px;
+}
+
+.texteProducteur {
+    font-size: 21px;
+}
+
+.page-producteur {
+    background: linear-gradient(to right, #ffffff, #588249);
+
+}
+
+.Producteur{
+    background-color: #EAE4DA;
+    border-radius: 30px;
+    max-width: 300px;
+    height: 400px;
+    margin-bottom: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding: 10px;
+    box-shadow: 0px 3px 2px #2c3e50;
+    text-align: center;
+}
+
+.img-producteur {
+    margin: 10px;
+    width: 90%;
+}
+
+.Nom {
+    font-size: 20px;
+}
+
+.listeProducteur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -2,12 +2,37 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import Card from "../components/Card";
+import Filtre from "../components/filter";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../styles/ProductList.css";
 
 function ProductList(props) {
   const [produits, setProduits] = useState([]);
   const [isloading, setisloading] = useState(true);
+
+  const [selectedCategory, setSelectedCategory] = useState("-1"); // État pour la catégorie sélectionnée
+  const [filteredElements, setFilteredElements] = useState(produits); // État pour la liste filtrée
+
+  // Fonction de callback passée au composant Filtre pour recevoir la key sélectionnée
+  const handleSelectCategory = (key) => {
+    setSelectedCategory(key);
+  };
+
+  // Utiliser useEffect pour filtrer les produits lorsque la catégorie change
+  useEffect(() => {
+    if (selectedCategory === "-1") {
+      setFilteredElements(produits); // Affiche tous les produits
+    } else {
+      console.log(produits);
+      console.log(selectedCategory);
+      const filtered = produits.filter(
+        (produit) => produit.type_produit_id === parseInt(selectedCategory),
+      );
+      console.log(filtered);
+      setFilteredElements(filtered); // Met à jour la liste filtrée
+    }
+  }, [selectedCategory, produits]); // Déclenche lorsque selectedCategory ou produits changent
+
   useEffect(() => {
     const fetchProduits = async () => {
       try {
@@ -46,11 +71,14 @@ function ProductList(props) {
 
   return (
     <div>
+      <h4 className="titres">Liste des produits</h4>
       <div className="ttitre">
         <h3>Liste des produits</h3>
       </div>
+      <Filtre onSelectCategory={handleSelectCategory} />
+      <div>le retour du composant Filtre : {selectedCategory}</div>
       <div className="product-list">
-        {produits.map((produit) => (
+        {filteredElements.map((produit) => (
           <Card
             key={produit.id_produit}
             produit={produit}

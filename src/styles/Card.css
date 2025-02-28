@@ -1,23 +1,52 @@
 .Card {
-    background-color: #fff;
+    background-color: #EAE4DA;
     border-radius: 15px;
     padding: 20px;
     margin-left: 55px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     width: 100%;
     overflow: hidden;
+    box-shadow: 1px 5px 1px #2c3e50;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+
 }
 
 .Card:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f8f8f8;
+    box-shadow: 1px 5px 1px #2c3e50;
+    border: 1px solid black;
+    background-color: #EAE4DA;
 }
 
 .Card p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: black;
-    margin-bottom: 15
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.details-btn {
+    background-color: #5C8D48;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.cardpack {
+    margin-top: 20px;
+    width: 65%;
+    margin-right: -20px;
+    margin-left: -40px;
+}
+
+.information {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+
 }

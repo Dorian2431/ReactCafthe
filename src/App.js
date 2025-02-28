@@ -5,6 +5,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/home";
 import ProductDetails from "./pages/ProductDetails";
 import { AuthProvider } from "./contexte/AuthContext";
+import Producteur from "./pages/Producteur";
 import Login from "./pages/Login";
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="produit/:id" element={<ProductDetails />} />
+            <Route path={"Producteur"} element={<Producteur />} />
           </Route>
           <Route path={"login"} element={<Login />} />
         </Routes>

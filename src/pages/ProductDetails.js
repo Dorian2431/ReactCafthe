@@ -28,7 +28,7 @@ function ProductDetails(props) {
       {/* Partie gauche avec image et stock */}
       <div className="gauche">
         <div className="d-img">
-          <p>Image</p>
+          <img src="/pack1.png" alt="Pack de café" className="cardpack2" />
         </div>
         <p className="stock">En stock : {detail.Stock}</p>
         <div className="quantite">
