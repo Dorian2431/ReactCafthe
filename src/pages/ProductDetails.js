@@ -44,6 +44,7 @@ function ProductDetails(props) {
         <button className="add-panier">Ajouter au Panier</button>
       </div>
       <div className="droite">
+        {/* Partie droite */}
         <h2 className="titre-d">{detail.Nom}</h2>
         <hr />
         <p className="description-d">{detail.Description}</p>

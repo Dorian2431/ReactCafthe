@@ -22,8 +22,11 @@ function Navbar(props) {
         {/* Bloc du téléphone */}
         <div className="blocs">
           <div className="connexion">
-            <div className="color">
-              <FontAwesomeIcon icon={faUser} />
+            <div className="nav-compte">
+              <a href="/Compte">
+                <FontAwesomeIcon icon={faUser} />
+                <p className="nav-compte ecrit">Compte</p>
+              </a>
             </div>
             {isAuthenticated ? (
               <>

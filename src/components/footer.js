@@ -2,11 +2,13 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import "../styles/footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faEnvelope,
   faMapLocation,
   faPhoneVolume,
   faTurnDown,
+  facebook,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
@@ -21,11 +23,11 @@ function Footer() {
             alt="Description de l'image"
           />
           <div>
-            <a className="lien" href="#">
+            <a className="lien" href="/Mentionlegale">
               <b>Mention Légale</b>
             </a>
             <br></br>
-            <a className="lien" href="#">
+            <a className="lien" href="/Politique">
               <b>Politique de confidentialité</b>
             </a>
           </div>
@@ -81,28 +83,21 @@ function Footer() {
           </p>
           <div>
             <div className="rs">
-              <a
-                href="#"
-                className="text-green-400 text-xl hover:text-green-300"
-              >
-                <FaFacebookF />
-              </a>
-            </div>
-            <div className="rs">
-              <a
-                href="#"
-                className="text-green-400 text-xl hover:text-green-300"
-              >
-                <FaInstagram />
-              </a>
-            </div>
-            <div className="rs">
-              <a
-                href="#"
-                className="text-green-400 text-xl hover:text-green-300"
-              >
-                <FaTwitter />
-              </a>
+              <div className="rs4">
+                <a className="lien" href="/">
+                  <FaTwitter />{" "}
+                </a>
+              </div>
+              <div className="rs2">
+                <a className="lien" href="/">
+                  <FaInstagram />
+                </a>
+              </div>
+              <div className="rs3">
+                <a className="lien" href="/">
+                  <FaFacebookF />
+                </a>
+              </div>
             </div>
           </div>
         </div>

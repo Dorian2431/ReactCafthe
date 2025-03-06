@@ -26,7 +26,7 @@ nav {
 }
 
 .color {
-    color: #00b83d;
+    color: green;
     font-size: 10px;
     text-align: center;
 
@@ -79,7 +79,6 @@ button:hover {
 }
 
 
-
 .panier {
     display: flex;
     flex-direction: column;
@@ -93,4 +92,11 @@ button:hover {
     text-align: center;
 }
 
+.nav-compte svg{
+    color: green;
 
+}
+
+.nav-compte :hover {
+    color: #28a745;
+}

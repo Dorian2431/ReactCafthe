@@ -32,14 +32,12 @@
     z-index: -1;
 }
 
-.logo {
+.h-logo {
     position: absolute;
-    top: 10px;
-    left: 20px;
-    z-index: 10;
-    width: 200px;
+    top: 28px;
+    left: -20px;
+    width: 250px;
     height: auto;
-    border: 2px solid red;
     display: flex;
     align-items: center;
 }
@@ -49,4 +47,16 @@
     height: auto;
     object-fit: contain;
     border: 2px solid blue;
+}
+
+.h-texte {
+    position: absolute;
+    top: 150px;
+    font-size: 20px;
+    left: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    -webkit-text-stroke: 0.8px black;
 }

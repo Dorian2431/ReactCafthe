@@ -49,7 +49,7 @@
 }
 
 .lien:hover {
-    color: #2c1bff;
+    color: #28a745;
 }
 
 .logo {
@@ -79,15 +79,30 @@
 .nom {}
 
 .rs {
-    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
     color: green;
-    display: inline-block;
-    margin-right: 25px;
+    margin-right: 300px;
+
 }
 
-.rs:hover {
-    color: blue;
+.rs4 :hover {
+    color: #28a745;
     font-size: 35px;
+    cursor: pointer;
+}
+
+.rs2 :hover {
+    color: #28a745;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.rs3 :hover {
+    color: #28a745;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 .test {

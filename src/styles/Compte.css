@@ -1,0 +1,17 @@
+.c-titre {
+    margin-bottom:100px;
+    text-align: center;
+}
+
+.c-gauche {
+    text-align: center;
+    width: 33%;
+    background: #EAE4DA;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.c-bordure {
+    border: 1px solid black;
+}
