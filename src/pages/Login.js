@@ -3,6 +3,7 @@ import "../styles/login.css";
 import axios from "axios";
 import { AuthContext } from "../contexte/AuthContext";
 import { useNavigate } from "react-router-dom";
+import Motdepasse from "./Motdepasse";
 
 console.log("hello world");
 
@@ -20,7 +21,7 @@ function Login(props) {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/client/login",
+        `${process.env.REACT_APP_API_URL}/api/client/login`,
         {
           email: email,
           motDePasse: motdepasse,
@@ -44,7 +45,7 @@ function Login(props) {
   };
 
   return (
-    <div className="pagedeco" style={{ margin: "300px auto", maxWidth: 400 }}>
+    <div className="pagedeco" style={{ margin: "250px auto", maxWidth: 400 }}>
       <div className="logo-container">
         <img src={"/logoco.png"} alt="Description de l'image" />
       </div>
@@ -85,10 +86,10 @@ function Login(props) {
           <b> Se connecter </b>
         </button>
       </form>
-      <a className="mdp" href="#">
+      <a className="mdp" href="/Motdepasse">
         Mot de passe oublié
       </a>
-      <a className="compte" href="#">
+      <a className="compte" href="/Newcompte">
         Crée un compte
       </a>
     </div>

@@ -84,17 +84,17 @@ function Footer() {
           <div>
             <div className="rs">
               <div className="rs4">
-                <a className="lien" href="/">
+                <a className="rsl" href="/">
                   <FaTwitter />{" "}
                 </a>
               </div>
               <div className="rs2">
-                <a className="lien" href="/">
+                <a className="rsl2" href="/">
                   <FaInstagram />
                 </a>
               </div>
               <div className="rs3">
-                <a className="lien" href="/">
+                <a className="rsl3" href="/">
                   <FaFacebookF />
                 </a>
               </div>

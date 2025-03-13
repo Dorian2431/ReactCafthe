@@ -22,10 +22,11 @@ function Header(props) {
       />
       <p className="h-texte">
         <b>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.{" "}
+          Bienvenue sur Cafthe, votre destination incontournable pour une
+          expérience unique autour du thé et du café. Que vous soyez un
+          passionné de thé, un amateur de café ou à la recherche du parfait
+          accessoire, Cafthe vous accompagne dans chaque moment de dégustation
+          avec style et authenticité.
         </b>
       </p>
     </div>

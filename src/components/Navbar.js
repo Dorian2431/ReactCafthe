@@ -24,8 +24,10 @@ function Navbar(props) {
           <div className="connexion">
             <div className="nav-compte">
               <a href="/Compte">
-                <FontAwesomeIcon icon={faUser} />
-                <p className="nav-compte ecrit">Compte</p>
+                <button className="nav-compte-ecrit">
+                  <FontAwesomeIcon icon={faUser} />
+                  Compte
+                </button>
               </a>
             </div>
             {isAuthenticated ? (
@@ -51,16 +53,20 @@ function Navbar(props) {
         {/* Connexion */}
         <div className="blocs">
           <div className="connexion">
-            <div className="color">
-              <FontAwesomeIcon icon={faPhoneVolume} />
+            <div>
+              <div className="phone-svg">
+                <FontAwesomeIcon icon={faPhoneVolume} />
+              </div>
               <p className="ecrit">06 07 08 09 010</p>
             </div>
           </div>
 
           {/* Panier */}
           <div className="panier">
-            <div className="color">
-              <FontAwesomeIcon icon={faBasketShopping} />
+            <div className="panier-svg">
+              <a href="/Panier">
+                <FontAwesomeIcon icon={faBasketShopping} />
+              </a>
             </div>
             <p className="ecrit">Panier </p>
           </div>

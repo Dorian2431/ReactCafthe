@@ -12,7 +12,6 @@
     background-color: #333;
 }
 
-
 .ima {
     position: absolute;
     top: 0;
@@ -59,4 +58,78 @@
     align-items: center;
     width: 800px;
     -webkit-text-stroke: 0.8px black;
+}
+
+/* --- Responsive --- */
+
+/* Tablette (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .head {
+        height: 350px; /* Augmenter la hauteur du header sur tablette */
+    }
+
+    .h-logo {
+        top: 50px; /* Ajuster la position du logo */
+        left: 10px; /* Décalage du logo pour les tablettes */
+        width: 200px; /* Réduire la taille du logo */
+    }
+
+    .h-texte {
+        top: 180px; /* Ajuster la position du texte */
+        font-size: 18px; /* Réduire la taille de la police */
+        width: 70%; /* Largeur plus petite pour s'adapter aux tablettes */
+        left: 15px; /* Décalage du texte pour les tablettes */
+    }
+
+    .ima {
+        height: 120%; /* Augmenter légèrement la hauteur de l'image */
+    }
+}
+
+/* Smartphones (max-width: 768px) */
+@media (max-width: 768px) {
+    .head {
+        height: 300px; /* Ajuster la hauteur du header sur mobile */
+    }
+
+    .h-logo {
+        top: 30px; /* Positionner plus haut le logo sur mobile */
+        left: 10px;
+        width: 150px; /* Réduire davantage la taille du logo */
+    }
+
+    .h-texte {
+        top: 190px; /* Ajuster la position du texte */
+        font-size: 16px; /* Réduire la taille de la police */
+        width: 90%; /* Largeur presque complète pour s'adapter aux petits écrans */
+        left: 10px;
+    }
+
+    .ima {
+        height: 130%; /* Ajuster la hauteur de l'image pour mobile */
+    }
+}
+
+/* Très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .head {
+        height: 250px; /* Réduire la hauteur pour les très petits écrans */
+    }
+
+    .h-logo {
+        top: 20px; /* Ajuster la position du logo */
+        left: 10px;
+        width: 120px; /* Réduire encore la taille du logo */
+    }
+
+    .h-texte {
+        top: 160px; /* Réajuster la position du texte */
+        font-size: 14px; /* Réduire encore la taille de la police */
+        width: 90%; /* Occuper presque toute la largeur */
+        left: 10px;
+    }
+
+    .ima {
+        height: 140%; /* Augmenter encore la hauteur de l'image pour petits écrans */
+    }
 }

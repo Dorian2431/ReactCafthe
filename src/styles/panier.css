@@ -1,0 +1,37 @@
+.panier-t {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.panier-l {
+    text-align: center;
+    width: 90%;
+    color: black;
+    padding: 40px;
+}
+
+.liste-panier {
+    border: 2px solid black;
+    background-color: #BCBCBC;
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    justify-content: space-evenly;
+}
+
+.panier-add {
+    background-color: #5C8D48;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.suivant {
+    background-color: #5C8D48;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 15%;
+}

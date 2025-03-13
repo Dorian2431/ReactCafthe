@@ -9,7 +9,6 @@
     flex: 1;
 }
 
-
 .footer {
     width: 100%;
     height: 280px;
@@ -82,9 +81,20 @@
     display: flex;
     flex-direction: row;
     font-size: 30px;
-    color: green;
-    margin-right: 300px;
+}
 
+.rsl {
+    color: #3aa0ff;
+}
+
+.rsl2 {
+    color: #3aa0ff;
+    margin-left: -100px;
+}
+
+.rsl3 {
+    color: #3aa0ff;
+    margin-left: -200px;
 }
 
 .rs4 :hover {
@@ -111,4 +121,110 @@
     flex-direction: column; /* Empiler le logo et les liens verticalement */
     align-items: flex-start; /* Aligner à gauche */
     justify-content: flex-start; /* Assurer que tout commence par le haut */
+}
+
+/* --- Responsive --- */
+
+/* Tablette (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .footer {
+        height: auto; /* La hauteur s'adapte à la taille du contenu */
+        flex-direction: column; /* Le contenu se positionne en colonne */
+        align-items: center; /* Centrer le contenu horizontalement */
+    }
+
+    .footer2 {
+        display: flex;
+        flex-direction: column; /* Affiche les sections en colonne sur tablette */
+        align-items: center;
+    }
+
+    .logo {
+        width: 30%; /* Agrandir un peu le logo */
+    }
+
+    .contact {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .rs {
+        font-size: 25px;
+        justify-content: center; /* Centrer les icônes des réseaux sociaux */
+    }
+
+    .rsl2, .rsl3 {
+        margin-left: 0; /* Enlever les marges négatives sur les icônes */
+    }
+}
+
+/* Smartphones (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer {
+        height: auto; /* La hauteur s'ajuste à la taille du contenu */
+        flex-direction: column; /* Affichage des éléments en colonne */
+        align-items: center; /* Centrer le contenu */
+        padding: 20px; /* Espacement autour du footer */
+    }
+
+    .footer2 {
+        display: flex;
+        flex-direction: column; /* Empilement des éléments du footer */
+        align-items: center;
+    }
+
+    .logo {
+        width: 40%; /* Le logo prend plus de place sur mobile */
+        margin-bottom: 40px; /* Plus d'espace entre le logo et le texte */
+    }
+
+    .contact {
+        text-align: center; /* Centrer le texte contact */
+        padding: 10px 0;
+    }
+
+    .rs {
+        font-size: 25px;
+        justify-content: center; /* Centrer les icônes des réseaux sociaux */
+        gap: 20px; /* Espacement entre les icônes */
+    }
+
+    .rsl2, .rsl3 {
+        margin-left: 0; /* Enlever les marges négatives */
+    }
+}
+
+/* Très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer {
+        height: auto;
+        padding: 10px; /* Moins d'espace sur les très petits écrans */
+    }
+
+    .footer2 {
+        display: flex;
+        flex-direction: column; /* Empilement vertical */
+        align-items: center; /* Centrer le contenu */
+    }
+
+    .logo {
+        width: 50%; /* Logo encore plus grand sur les petits écrans */
+        margin-bottom: 20px; /* Moins d'espace entre le logo et les liens */
+    }
+
+    .contact {
+        padding: 5px 0;
+        text-align: center; /* Centrer la section de contact */
+    }
+
+    .rs {
+        font-size: 20px;
+        flex-direction: column; /* Afficher les icônes en colonne */
+        gap: 10px;
+    }
+
+    .rsl2, .rsl3 {
+        margin-left: 0; /* Enlever les marges négatives */
+    }
 }

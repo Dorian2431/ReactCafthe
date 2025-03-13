@@ -9,26 +9,20 @@ function Producteur(props) {
           <h1 className="titreProducteur">Nos Producteurs</h1>
           <div className="texteProducteur">
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like). It is a long established
-              fact that a reader will be distracted by the readable content of a
-              page when looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters, as
-              opposed to using 'Content here, content here', making it look like
-              readable English. Many desktop publishing packages and web page
-              editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in
-              their infancy. Various versions have evolved over the years,
-              sometimes by accident, sometimes on purpose (injected humour and
-              the like).
+              Chez Cafthe, nous sommes fiers de collaborer avec des producteurs
+              passionnés qui partagent notre amour pour le café et le thé de
+              qualité. Chaque producteur apporte son savoir-faire unique et son
+              respect des traditions, garantissant des produits exceptionnels,
+              de l'origine à la tasse. Nous croyons que la qualité commence dès
+              la plantation, et c'est pourquoi nous avons choisi de travailler
+              avec des producteurs engagés à offrir le meilleur de leur récolte.
+              Nos producteurs, Alice, Alberto et Anthonie, cultivent avec soin
+              les meilleures variétés de café et de thé. Leur savoir-faire et
+              leur respect de l'environnement nous permettent de vous offrir une
+              expérience gustative authentique et de qualité. De l'arbre à la
+              tasse, nous vous invitons à découvrir le parcours de chaque
+              producteur et l'histoire unique qui se cache derrière chaque grain
+              de café ou chaque feuille de thé.
             </p>
           </div>
         </div>
@@ -46,9 +40,10 @@ function Producteur(props) {
             className="img-producteur"
           />
           <p>
-            lorem ipsum will uncover many web sites still in their infancy.
-            Various versions have evolved over the years, sometimes by accident,
-            sometimes on purpose (injected humour and the like).
+            Alice cultive des feuilles de thé d'exception dans les montagnes
+            d'Asie. Son savoir-faire ancestral et ses méthodes respectueuses de
+            l'environnement garantissent un thé raffiné, pur et d'une qualité
+            supérieure.
           </p>
         </div>
         <div className="Producteur">
@@ -63,14 +58,16 @@ function Producteur(props) {
             className="img-producteur"
           />
           <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            Alberto produit un Café Arabica de qualité supérieure dans les
+            montagnes d'Amérique Latine. Il utilise des méthodes durables pour
+            offrir des grains doux et riches en saveurs, parfaits pour les
+            amateurs de café fin.
           </p>
         </div>
         <div className="Producteur">
           <div className="Nom">
             <b>
-              <p>Alterto</p>
+              <p>Alberto</p>
             </b>
           </div>
           <img
@@ -79,9 +76,10 @@ function Producteur(props) {
             className="img-producteur"
           />
           <p>
-            Making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum'
+            Anthonie cultive un thé noir au goût puissant et complexe. Ses
+            méthodes artisanales et respectueuses de la nature lui permettent de
+            créer un thé authentique, riche en arômes et parfait pour les
+            connaisseurs.
           </p>
         </div>
       </div>

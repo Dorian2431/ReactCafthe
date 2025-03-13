@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import Card from "../components/Card";
+import ProductDetails from "./ProductDetails";
 import Filtre from "../components/filter";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../styles/ProductList.css";
@@ -10,7 +11,7 @@ function ProductList(props) {
   const [produits, setProduits] = useState([]);
   const [isloading, setisloading] = useState(true);
 
-  const [selectedCategory, setSelectedCategory] = useState("-1"); // État pour la catégorie sélectionnée
+  const [selectedCategory, setSelectedCategory] = useState(0); // État pour la catégorie sélectionnée
   const [filteredElements, setFilteredElements] = useState(produits); // État pour la liste filtrée
 
   // Fonction de callback passée au composant Filtre pour recevoir la key sélectionnée
@@ -20,7 +21,7 @@ function ProductList(props) {
 
   // Utiliser useEffect pour filtrer les produits lorsque la catégorie change
   useEffect(() => {
-    if (selectedCategory === "-1") {
+    if (selectedCategory === 0) {
       setFilteredElements(produits); // Affiche tous les produits
     } else {
       console.log(produits);
@@ -36,7 +37,9 @@ function ProductList(props) {
   useEffect(() => {
     const fetchProduits = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/produit");
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/produit`,
+        );
         setProduits(response.data);
       } catch (error) {
         console.error("Erreur du chargement des produits", error);
@@ -53,7 +56,6 @@ function ProductList(props) {
       <div className="product-list">
         {Array.from({ length: produits.length }).map((_, i) => (
           <div key={i} className="product-skeleton">
-            {/*Imagee*/}
             <Skeleton height={200} width={300} />
 
             <div style={{ marginTop: "5px" }}>

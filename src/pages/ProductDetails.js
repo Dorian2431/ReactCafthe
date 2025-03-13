@@ -12,23 +12,27 @@ function ProductDetails(props) {
     const fetchdetail = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/api/produit/${id}`,
+          `${process.env.REACT_APP_API_URL}/api/produit/${id}`,
         );
         setdetail(response.data); /*Permet d'avoir accée au donné*/
       } catch (error) {
         console.error("Erreur d'ajout au Panier", error);
       }
     };
-
     void fetchdetail();
   }, [id]); /*A chaque fois que l'ia va changer, sa va recharger*/
 
+  console.log(detail);
   return (
     <div className="product-container">
       {/* Partie gauche avec image et stock */}
       <div className="gauche">
         <div className="d-img">
-          <img src="/pack1.png" alt="Pack de café" className="cardpack2" />
+          <img
+            src={`/${detail.image}`}
+            alt="Logo cafthé marron et vert"
+            className="cardpack img_details"
+          />
         </div>
         <p className="stock">En stock : {detail.Stock}</p>
         <div className="quantite">

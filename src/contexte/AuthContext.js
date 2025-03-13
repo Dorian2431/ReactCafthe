@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 
-/*Exporatation du contexte pour y avoir accées*/
+/*Exportation du contexte pour y avoir accées*/
 /*On va prendre tous ce qu'il y a dans App (toute l'appli),on sera connecter quand on sera connecter et inversement si déco*/
 export const AuthContext = createContext(null);
 

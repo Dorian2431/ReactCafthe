@@ -10,6 +10,12 @@ import Login from "./pages/Login";
 import Mentionlegale from "./pages/Mentionlegale";
 import Politique from "./pages/Politique";
 import Compte from "./pages/Compte";
+import Panier from "./pages/Panier";
+import Paiement from "./pages/Paiement";
+import Recap from "./pages/Recap";
+import Newcompte from "./pages/Newcompte";
+import Motdepasse from "./pages/Motdepasse";
+
 function App() {
   return (
     <AuthProvider>
@@ -23,8 +29,13 @@ function App() {
             <Route path={"Mentionlegale"} element={<Mentionlegale />} />
             <Route path={"Politique"} element={<Politique />} />
             <Route path={"Compte"} element={<Compte />} />
+            <Route path={"Panier"} element={<Panier />} />
+            <Route path={"Paiement"} element={<Paiement />} />
+            <Route path={"Recap"} element={<Recap />} />
           </Route>
           <Route path={"login"} element={<Login />} />
+          <Route path={"Newcompte"} element={<Newcompte />} />
+          <Route path={"Motdepasse"} element={<Motdepasse />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

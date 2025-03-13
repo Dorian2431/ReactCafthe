@@ -1,17 +1,86 @@
 .c-titre {
-    margin-bottom:100px;
+    margin-bottom:70px;
     text-align: center;
+}
+
+.c-bloc {
+    display: flex;
+    grid-template-columns: 100% 100%;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.c-titre2 {
+    font-size: 25px;
+    margin-bottom: 0px;
 }
 
 .c-gauche {
     text-align: center;
-    width: 33%;
+    width: 40%;
     background: #EAE4DA;
     color: black;
     padding: 30px;
     border-radius: 20px;
+    margin: 50px;
 }
 
 .c-bordure {
     border: 1px solid black;
+    height: 400px;
+}
+
+.c-nom {
+    text-transform: capitalize;
+}
+
+.c-partie {
+    font-size: 23px;
+    line-height: 48px;
+}
+
+.c-droite {
+    text-align: center;
+    width: 40%;
+    color: black;
+    padding: 30px;
+    margin: 10px;
+}
+
+.compte-l {
+    border: 2px solid black;
+    background-color: #BCBCBC;
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    justify-content: space-evenly;
+
+}
+
+.compte-b {
+    background-color: #5C8D48;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.compte-b :hover {
+    background-color: #508d31;
+}
+
+.compte-d {
+    background-color: red;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 7px;
+}
+
+.compte-dc {
+    background-color: #5C8D48;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 7px;
 }

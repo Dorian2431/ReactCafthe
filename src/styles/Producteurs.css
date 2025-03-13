@@ -1,60 +1,164 @@
 .centre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Utilise Flexbox pour organiser les éléments dans une direction flexible (par défaut en ligne) */
+    justify-content: center; /* Centre les éléments horizontalement dans le conteneur */
+    align-items: center; /* Centre les éléments verticalement dans le conteneur */
 }
 
 .HautProducteur {
-    background-color: rgb(217, 217, 217, 0.5);
-    border-radius: 40px;
-    max-width: 1300px;
-    height: 500px;
-    text-align: center;
-    padding-right: 70px;
-    padding-left: 70px;
-    padding-bottom: 50px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    background-color: rgb(217, 217, 217, 0.5); /* Applique une couleur de fond gris clair semi-transparente */
+    border-radius: 40px; /* Arrondit les coins du conteneur avec un rayon de 40px */
+    max-width: 1300px; /* Limite la largeur du conteneur à 1300px maximum sur les grands écrans */
+    height: 500px; /* Définit une hauteur fixe de 500px */
+    text-align: center; /* Centre le texte horizontalement dans le conteneur */
+    padding-right: 70px; /* Ajoute un espacement de 70px à droite du conteneur */
+    padding-left: 70px; /* Ajoute un espacement de 70px à gauche du conteneur */
+    padding-bottom: 50px; /* Ajoute un espacement de 50px en bas du conteneur */
+    margin-top: 100px; /* Ajoute une marge de 100px au-dessus du conteneur */
+    margin-bottom: 100px; /* Ajoute une marge de 100px en dessous du conteneur */
 }
 
 .titreProducteur {
-    margin-bottom:100px;
-    font-size: 45px;
+    margin-bottom: 100px; /* Ajoute une marge de 100px en bas du titre */
+    font-size: 45px; /* Définit la taille de la police à 45px pour le titre */
 }
 
 .texteProducteur {
-    font-size: 21px;
+    font-size: 21px; /* Définit la taille de la police du texte à 21px */
 }
 
 .page-producteur {
-    background: linear-gradient(to right, #ffffff, #588249);
-
+    background: linear-gradient(to right, #ffffff, #588249); /* Applique un dégradé de couleur de blanc à vert (#588249) de gauche à droite */
 }
 
-.Producteur{
-    background-color: #EAE4DA;
-    border-radius: 30px;
-    max-width: 300px;
-    height: 400px;
-    margin-bottom: 30px;
-    margin-left: 120px;
-    margin-right: 120px;
-    padding: 10px;
-    box-shadow: 0px 3px 2px #2c3e50;
-    text-align: center;
+.Producteur {
+    background-color: #EAE4DA; /* Applique une couleur de fond beige clair */
+    border-radius: 30px; /* Arrondit les coins du conteneur avec un rayon de 30px */
+    width: 300px; /* Fixe la largeur des cartes à 300px pour toutes */
+    height: 400px; /* Fixe la hauteur des cartes à 400px pour toutes */
+    margin-bottom: 30px; /* Ajoute un espacement de 30px sous chaque carte */
+    margin-left: 120px; /* Ajoute un espacement de 120px à gauche de chaque carte */
+    margin-right: 120px; /* Ajoute un espacement de 120px à droite de chaque carte */
+    padding: 10px; /* Ajoute un espacement de 10px à l'intérieur des cartes */
+    box-shadow: 0px 3px 2px #2c3e50; /* Applique une ombre légère à chaque carte */
+    text-align: center; /* Centre le texte à l'intérieur de chaque carte */
+    display: flex; /* Utilise Flexbox pour l'organisation interne */
+    flex-direction: column; /* Dispose les éléments à l'intérieur de la carte en colonne */
+    justify-content: space-between; /* Équilibre l'espace vertical entre les éléments à l'intérieur de la carte */
 }
 
 .img-producteur {
-    margin: 10px;
-    width: 90%;
+    margin: 10px; /* Ajoute un espacement de 10px autour des images */
+    width: 90%; /* L'image occupe 90% de la largeur du conteneur */
 }
 
 .Nom {
-    font-size: 20px;
+    font-size: 20px; /* Définit la taille de la police du nom à 20px */
 }
 
 .listeProducteur {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: flex; /* Utilise Flexbox pour organiser les cartes des producteurs */
+    flex-direction: row; /* Dispose les éléments horizontalement (en ligne) */
+    justify-content: space-evenly; /* Répartit les éléments avec un espace égal entre eux */
+}
+
+/* Responsive pour les tablettes (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .titreProducteur {
+        font-size: 36px; /* Réduit la taille de la police du titre à 36px sur les tablettes */
+    }
+
+    .texteProducteur {
+        font-size: 18px; /* Réduit la taille de la police du texte à 18px sur les tablettes */
+    }
+
+    .Producteur {
+        max-width: 250px; /* Réduit la largeur maximale des cartes à 250px sur les tablettes */
+        height: auto; /* Ajuste la hauteur automatiquement selon le contenu */
+        margin-left: 10px; /* Réduit l'espacement gauche à 10px */
+        margin-right: 10px; /* Réduit l'espacement droit à 10px */
+    }
+
+    .HautProducteur {
+        max-width: 1200px; /* Réduit la largeur maximale du conteneur à 1200px sur les tablettes */
+        height: 550px; /* Augmente la hauteur du conteneur à 550px sur les tablettes */
+    }
+
+    .listeProducteur {
+        display: flex; /* Utilise Flexbox */
+        flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes sur les petites largeurs d'écran */
+        justify-content: space-around; /* Répartit les éléments de façon égale, avec plus d'espace autour d'eux */
+    }
+
+    .img-producteur {
+        width: 80%; /* Réduit la taille des images à 80% de la largeur sur les tablettes */
+    }
+}
+
+/* Responsive pour les smartphones (max-width: 768px) */
+@media (max-width: 768px) {
+    .HautProducteur {
+        height: 700px; /* Augmente la hauteur du conteneur à 700px sur les smartphones */
+        padding-right: 20px; /* Réduit l'espacement à droite du conteneur à 20px */
+        padding-left: 20px; /* Réduit l'espacement à gauche du conteneur à 20px */
+    }
+
+    .titreProducteur {
+        font-size: 30px; /* Réduit la taille de la police du titre à 30px sur les smartphones */
+        margin-bottom: 50px; /* Réduit la marge sous le titre à 50px sur les smartphones */
+    }
+
+    .texteProducteur {
+        font-size: 16px; /* Réduit la taille de la police du texte à 16px sur les smartphones */
+        padding: 0 15px; /* Ajoute un espacement intérieur de 15px sur les côtés du texte */
+    }
+
+    .Producteur {
+        max-width: 90%; /* Réduit la largeur des cartes à 90% de la largeur de l'écran sur les smartphones */
+        margin-left: 10px; /* Réduit l'espacement à gauche des cartes à 10px */
+        margin-right: 10px; /* Réduit l'espacement à droite des cartes à 10px */
+    }
+
+    .listeProducteur {
+        display: flex; /* Utilise Flexbox */
+        flex-direction: column; /* Empile les éléments verticalement sur les smartphones */
+        align-items: center; /* Centre les éléments verticalement */
+    }
+
+    .img-producteur {
+        width: 80%; /* Réduit la taille des images à 80% de la largeur sur les smartphones */
+    }
+}
+
+/* Réduire encore plus pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .HautProducteur {
+        height: 600px; /* Réduit la hauteur du conteneur à 600px sur les très petits écrans */
+        padding: 20px; /* Ajoute un espacement de 20px tout autour du conteneur */
+    }
+
+    .titreProducteur {
+        font-size: 24px; /* Réduit la taille du titre à 24px sur les très petits écrans */
+        margin-bottom: 30px; /* Réduit la marge sous le titre à 30px */
+    }
+
+    .texteProducteur {
+        font-size: 14px; /* Réduit la taille de la police du texte à 14px sur les très petits écrans */
+        padding: 0 10px; /* Ajoute un espacement intérieur de 10px à gauche et à droite du texte */
+    }
+
+    .Producteur {
+        max-width: 100%; /* Les cartes prennent toute la largeur de l'écran sur les très petits écrans */
+        margin-left: 5px; /* Réduit l'espacement gauche à 5px */
+        margin-right: 5px; /* Réduit l'espacement droit à 5px */
+    }
+
+    .img-producteur {
+        width: 100%; /* Les images prennent toute la largeur du conteneur sur les très petits écrans */
+    }
+
+    .listeProducteur {
+        display: flex; /* Utilise Flexbox */
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: center; /* Centre les éléments dans le conteneur */
+    }
 }

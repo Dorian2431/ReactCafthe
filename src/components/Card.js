@@ -7,7 +7,7 @@ function Card({ produit }) {
   return (
     <div className="Card">
       <img
-        src="/pack1.png"
+        src={produit.image}
         alt="Logo cafthé marron et vert"
         className="cardpack"
       />
