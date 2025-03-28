@@ -3,7 +3,6 @@ import "../styles/login.css";
 import axios from "axios";
 import { AuthContext } from "../contexte/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Motdepasse from "./Motdepasse";
 
 console.log("hello world");
 

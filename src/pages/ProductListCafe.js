@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function ProductList(props) {
+function ProductListCafe(props) {
   const [produits, setProduits] = useState([]);
   const [isloading, setisloading] = useState(true);
 
@@ -46,7 +46,7 @@ function ProductList(props) {
     const fetchProduits = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/produit`,
+          `${process.env.REACT_APP_API_URL}/api/categorie/cafe`,
         );
         setProduits(response.data);
       } catch (error) {
@@ -82,19 +82,19 @@ function ProductList(props) {
   return (
     <div>
       <h4 className="titres">Liste des produits</h4>
-      <p className="f-titre">
+      <p>
         <b>Filtre des produits :</b>
       </p>
       <div className="filtre">
         <div>
-          <a href="/" className="f-choisit">
+          <a href="/">
             <div className="f-tout">
               <FontAwesomeIcon icon={faThLarge} />
             </div>
           </a>
         </div>
         <div>
-          <a href="/cafe">
+          <a href="/cafe" className="f-choisit">
             <div className="f-cafe">
               <FontAwesomeIcon icon={faMugHot} />
             </div>
@@ -127,4 +127,4 @@ function ProductList(props) {
   );
 }
 
-export default ProductList;
+export default ProductListCafe;

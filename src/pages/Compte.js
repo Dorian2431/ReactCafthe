@@ -2,30 +2,32 @@ import React, { useEffect, useState, useContext } from "react";
 import "../styles/Compte.css";
 import { AuthContext } from "../contexte/AuthContext";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Motdepasse from "./Motdepasse";
+import { Link, useNavigate } from "react-router-dom";
 
 function Compte(props) {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogout = () => {
     logout();
+    navigate("/");
   };
-  console.log(user);
   const [client, setClient] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const userlocal = JSON.parse(localStorage.getItem("user"));
+    console.log(userlocal);
     const fetchClient = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/Compte`,
+          `${process.env.REACT_APP_API_URL}/api/Compte/${userlocal.id}`,
         );
         console.log(response.data);
         if (response.data.length > 0) {
           setClient(response.data[0]);
         }
       } catch (error) {
-        console.error("Erreur du chargement des produits", error);
+        console.error("Erreur", error);
       } finally {
         setLoading(false);
       }

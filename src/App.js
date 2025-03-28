@@ -15,16 +15,23 @@ import Paiement from "./pages/Paiement";
 import Recap from "./pages/Recap";
 import Newcompte from "./pages/Newcompte";
 import Motdepasse from "./pages/Motdepasse";
+import ProductListCafe from "./pages/ProductListCafe";
+import ProductListThe from "./pages/ProductListThe";
+import ProductListAccessoire from "./pages/ProductListAccessoire";
 
 function App() {
   return (
     <AuthProvider>
+      {/*CartProvider*/}
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<NotFound />}></Route>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="produit/:id" element={<ProductDetails />} />
+            <Route path="cafe" element={<ProductListCafe />} />
+            <Route path="The" element={<ProductListThe />} />
+            <Route path="Accessoire" element={<ProductListAccessoire />} />
             <Route path={"Producteur"} element={<Producteur />} />
             <Route path={"Mentionlegale"} element={<Mentionlegale />} />
             <Route path={"Politique"} element={<Politique />} />
