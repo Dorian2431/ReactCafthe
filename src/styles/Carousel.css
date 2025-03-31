@@ -1,0 +1,81 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30%;
+    margin: auto;
+}
+
+.carousel-slide {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #EAE4DA;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 1px 5px 1px #2c3e50;
+    align-items: center;
+}
+
+.carousel-content {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centre le texte et les éléments */
+    gap: 20px; /* Ajoute de l'espace entre les éléments */
+}
+
+.carousel-slide img {
+    width: 80%; /* Ajuste cette valeur pour la taille de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    max-width: 600px; /* Limite la largeur maximale de l'image */
+    border-radius: 10px;
+}
+
+.carousel-button {
+    background-color: #5C8D48;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 70px;
+}
+
+.next :hover {
+    background-color: #ceb6a3;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        width: 100%;
+    }
+}

@@ -14,6 +14,7 @@ import {
   faBasketShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Carousel from "../components/Carousel";
 
 function ProductListCafe(props) {
   const [produits, setProduits] = useState([]);
@@ -81,37 +82,33 @@ function ProductListCafe(props) {
 
   return (
     <div>
+      <h4 className="titres">Nos Produits Populaires</h4>
+      <Carousel />
       <h4 className="titres">Liste des produits</h4>
-      <p>
+      <p className="f-titre">
         <b>Filtre des produits :</b>
       </p>
       <div className="filtre">
         <div>
-          <a href="/">
-            <div className="f-tout">
-              <FontAwesomeIcon icon={faThLarge} />
-            </div>
+          <a href="/" className="f-bouton2">
+            <button className="f-bouton">Tout</button>
           </a>
         </div>
         <div>
-          <a href="/cafe" className="f-choisit">
-            <div className="f-cafe">
-              <FontAwesomeIcon icon={faMugHot} />
-            </div>
+          <a href="/cafe" className="f-bouton2">
+            <button type="submit" className="f-bouton">
+              Café
+            </button>
           </a>
         </div>
         <div>
-          <a href="/the">
-            <div className="f-the">
-              <FontAwesomeIcon icon={faLeaf} />
-            </div>
+          <a href="/the" className="f-bouton2">
+            <button className="f-bouton">Thé</button>
           </a>
         </div>
         <div>
-          <a href="/accessoire">
-            <div className="f-acc">
-              <FontAwesomeIcon icon={faKitchenSet} />
-            </div>
+          <a href="/accessoire" className="f-bouton2">
+            <button className="f-bouton">Accessoire</button>
           </a>
         </div>
       </div>

@@ -2,18 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import Card from "../components/Card";
-import ProductDetails from "./ProductDetails";
 import "react-loading-skeleton/dist/skeleton.css";
 import "../styles/ProductList.css";
-import {
-  faPhoneVolume,
-  faMugHot,
-  faLeaf,
-  faKitchenSet,
-  faThLarge,
-  faBasketShopping,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Carousel from "../components/Carousel";
 
 function ProductList(props) {
   const [produits, setProduits] = useState([]);
@@ -32,12 +23,9 @@ function ProductList(props) {
     if (selectedCategory === 0) {
       setFilteredElements(produits); // Affiche tous les produits
     } else {
-      console.log(produits);
-      console.log(selectedCategory);
       const filtered = produits.filter(
         (produit) => produit.type_produit_id === parseInt(selectedCategory),
       );
-      console.log(filtered);
       setFilteredElements(filtered); // Met à jour la liste filtrée
     }
   }, [selectedCategory, produits]); // Déclenche lorsque selectedCategory ou produits changent
@@ -81,37 +69,39 @@ function ProductList(props) {
 
   return (
     <div>
+      <h4 className="titres">Nos Produits Populaires</h4>
+      <Carousel />
       <h4 className="titres">Liste des produits</h4>
       <p className="f-titre">
         <b>Filtre des produits :</b>
       </p>
       <div className="filtre">
         <div>
-          <a href="/" className="f-choisit">
-            <div className="f-tout">
-              <FontAwesomeIcon icon={faThLarge} />
-            </div>
+          <a href="/" className="f-bouton2">
+            <button className="f-bouton">
+              <b>Tout</b>
+            </button>
           </a>
         </div>
         <div>
-          <a href="/cafe">
-            <div className="f-cafe">
-              <FontAwesomeIcon icon={faMugHot} />
-            </div>
+          <a href="/cafe" className="f-bouton2">
+            <button type="submit" className="f-bouton">
+              <b>Café</b>
+            </button>
           </a>
         </div>
         <div>
-          <a href="/the">
-            <div className="f-the">
-              <FontAwesomeIcon icon={faLeaf} />
-            </div>
+          <a href="/the" className="f-bouton2">
+            <button className="f-bouton">
+              <b>Thé</b>
+            </button>
           </a>
         </div>
         <div>
-          <a href="/accessoire">
-            <div className="f-acc">
-              <FontAwesomeIcon icon={faKitchenSet} />
-            </div>
+          <a href="/accessoire" className="f-bouton2">
+            <button className="f-bouton">
+              <b>Accessoire</b>
+            </button>
           </a>
         </div>
       </div>
@@ -128,3 +118,40 @@ function ProductList(props) {
 }
 
 export default ProductList;
+
+function Filtre({ onSelectCategory }) {
+  const valeurParDefaut = [{ id: -1, nom: "Toutes" }];
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchFiltre = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/api/categorie");
+        setCategories(valeurParDefaut.concat(response.data.concat()));
+      } catch (error) {
+        console.error("Erreur du chargement des categories", error);
+      }
+    };
+    void fetchFiltre();
+  }, []);
+
+  const [selectedCategory, setSelectedCategory] = useState("-1"); // état pour stocker la catégorie sélectionnée
+  const handleChange = (event) => {
+    setSelectedCategory(event.target.value); // met à jour l'état avec la catégorie sélectionnée
+    onSelectCategory(event.target.value); // Appelle la fonction de callback du parent pour transmettre la key
+  };
+
+  return (
+    <div>
+      <label>Filtre</label>
+      <select onChange={(e) => handleChange(e)}>
+        {categories.map((option) => (
+          <option key={option.id} value={option.id}>
+            {option.nom}
+          </option>
+        ))}
+      </select>
+      <div>la sélection du filtre : {selectedCategory}</div>
+    </div>
+  );
+}

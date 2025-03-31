@@ -10,13 +10,33 @@
     padding: 40px;
 }
 
-.liste-panier {
+.listeh-panier {
     border: 2px solid black;
-    background-color: #BCBCBC;
+    background-color: white;
     list-style: none;
     display: flex;
-    gap: 80px;
-    justify-content: space-evenly;
+    justify-content: space-between;  /* Alignement flexible sans espace vide */
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+.liste-panier {
+    border: 2px solid black;
+    background-color: #EAE4DA;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;  /* Alignement flexible sans espace vide */
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+.liste-panier li,
+.listeh-panier li {
+    flex: 1;  /* Permet à chaque élément de prendre une portion égale de l'espace disponible */
+    text-align: center;  /* Centrer le texte dans chaque cellule */
 }
 
 .panier-add {
@@ -34,4 +54,15 @@
     border: 1px solid black;
     padding: 10px;
     width: 15%;
+}
+
+.total {
+    text-align: right;
+    margin-right: 150px;
+    font-size: 20px;
+}
+
+.panier-b {
+    background: transparent;
+    font-size: 16px;
 }

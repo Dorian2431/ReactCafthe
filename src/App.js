@@ -18,33 +18,35 @@ import Motdepasse from "./pages/Motdepasse";
 import ProductListCafe from "./pages/ProductListCafe";
 import ProductListThe from "./pages/ProductListThe";
 import ProductListAccessoire from "./pages/ProductListAccessoire";
+import { CartProvider } from "./contexte/CartContext";
 
 function App() {
   return (
     <AuthProvider>
-      {/*CartProvider*/}
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<NotFound />}></Route>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="produit/:id" element={<ProductDetails />} />
-            <Route path="cafe" element={<ProductListCafe />} />
-            <Route path="The" element={<ProductListThe />} />
-            <Route path="Accessoire" element={<ProductListAccessoire />} />
-            <Route path={"Producteur"} element={<Producteur />} />
-            <Route path={"Mentionlegale"} element={<Mentionlegale />} />
-            <Route path={"Politique"} element={<Politique />} />
-            <Route path={"Compte"} element={<Compte />} />
-            <Route path={"Panier"} element={<Panier />} />
-            <Route path={"Paiement"} element={<Paiement />} />
-            <Route path={"Recap"} element={<Recap />} />
-          </Route>
-          <Route path={"login"} element={<Login />} />
-          <Route path={"Newcompte"} element={<Newcompte />} />
-          <Route path={"Motdepasse"} element={<Motdepasse />} />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={<NotFound />}></Route>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="produit/:id" element={<ProductDetails />} />
+              <Route path="cafe" element={<ProductListCafe />} />
+              <Route path="The" element={<ProductListThe />} />
+              <Route path="Accessoire" element={<ProductListAccessoire />} />
+              <Route path={"Producteur"} element={<Producteur />} />
+              <Route path={"Mentionlegale"} element={<Mentionlegale />} />
+              <Route path={"Politique"} element={<Politique />} />
+              <Route path={"Compte"} element={<Compte />} />
+              <Route path={"Panier"} element={<Panier />} />
+              <Route path={"Paiement"} element={<Paiement />} />
+              <Route path={"Recap"} element={<Recap />} />
+            </Route>
+            <Route path={"login"} element={<Login />} />
+            <Route path={"Newcompte"} element={<Newcompte />} />
+            <Route path={"Motdepasse"} element={<Motdepasse />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </AuthProvider>
   );
 }

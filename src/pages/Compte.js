@@ -3,6 +3,7 @@ import "../styles/Compte.css";
 import { AuthContext } from "../contexte/AuthContext";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { CartProvider } from "../contexte/CartContext";
 
 function Compte(props) {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
@@ -59,11 +60,6 @@ function Compte(props) {
               <p>
                 <b> Mot de passe :</b> <input type="password" value={MDP} />
               </p>
-            </div>
-            <a className="mdp" href="/Motdepasse">
-              Modifier le Mot de passe
-            </a>
-            <div className="c-partie">
               <b>
                 <p>Adresse e-mail : {Email}</p>
               </b>

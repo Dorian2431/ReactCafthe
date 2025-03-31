@@ -14,11 +14,6 @@ h4 {
     margin: 100px;
 }
 
-.f-choisit {
-    border: 2px solid #ff0017;
-    padding: 2px;
-}
-
 .filtre {
     display: flex; /* Aligne les éléments horizontalement */
     align-items: center; /* Centre verticalement les éléments */
@@ -27,80 +22,17 @@ h4 {
     margin-left: 20px;
 }
 
-.filtre div {
-    display: flex;
-    justify-content: center; /* Centre les icônes dans leurs div */
+.f-bouton {
+    background-color: #e1c7b2;
+    border: 2px solid #754624;
+    border-radius: 10%;
+    box-shadow: 0px 1px 0px black;
+    color: black;
 }
 
-.filtre p {
-    margin-right: 20px; /* Espace entre le texte "Filtre des produits" et les icônes */
-}
-
-.f-cafe {
-    display: flex;
-    flex-direction: column; /* Place l'icône et le texte l'un sous l'autre */
-    align-items: center; /* Centre le contenu */
-    color: #6B4F3F;
-    text-align: center;
-}
-
-
-.f-cafe  :hover {
-    font-size: 35px;
-    color: #ba896e;
-}
-
-.f-the {
-    display: flex;
-    flex-direction: column; /* Place l'icône et le texte l'un sous l'autre */
-    align-items: center; /* Centre le contenu */
-    color: green;
-    text-align: center;
-}
-
-
-.f-the  :hover {
-    font-size: 35px;
-    color: #2fff49;
-}
-
-.f-acc {
-    display: flex;
-    flex-direction: column; /* Place l'icône et le texte l'un sous l'autre */
-    align-items: center; /* Centre le contenu */
-    color: #303535;
-    text-align: center;
-}
-
-
-.f-acc  :hover {
-    font-size: 35px;
-    color: #474e4e;
-}
-
-.f-tout {
-    display: flex;
-    flex-direction: column; /* Place l'icône et le texte l'un sous l'autre */
-    align-items: center; /* Centre le contenu */
-    color: #303535;
-    text-align: center;
-}
-
-
-.f-tout  :hover {
-    font-size: 35px;
-    color: #474e4e;
-}
-
-.f-texte {
-    font-size: 12px;
-    color: #303535;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px;
-    border-radius: 4px;
-    margin-top: 5px; /* Espace entre l'icône et le texte */
-    white-space: nowrap;
-    text-align: center;
+.f-bouton2 :hover {
+    background-color: #ceb6a3;
+    font-size: 15px;
 }
 
 .f-titre {

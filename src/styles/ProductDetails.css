@@ -1,6 +1,5 @@
 .product-container {
     margin-top: 50px;
-    margin-bottom: 100px;
     display: flex;
     padding: 100px;
 }
@@ -96,4 +95,8 @@
     height: 1px;
     background: black;
     margin: 10px 0;
+}
+
+.retour-accueil {
+
 }
