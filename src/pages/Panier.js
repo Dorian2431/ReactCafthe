@@ -47,7 +47,9 @@ function Panier() {
             </ul>
           ))
         ) : (
-          <p>Votre panier est vide.</p>
+          <p>
+            <b>Votre panier est vide.</b>
+          </p>
         )}
       </div>
       <div className="total">

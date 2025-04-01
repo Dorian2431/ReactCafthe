@@ -3,7 +3,6 @@ import "../styles/Compte.css";
 import { AuthContext } from "../contexte/AuthContext";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { CartProvider } from "../contexte/CartContext";
 
 function Compte(props) {
   const { user, isAuthenticated, logout } = useContext(AuthContext);
@@ -38,7 +37,7 @@ function Compte(props) {
   }, []);
 
   if (loading) {
-    return <div>Chargement...</div>;
+    //return  <div>Chargement...</div>;
   }
 
   const { Nom, prenom, MDP, Email, Adresse } = client;
