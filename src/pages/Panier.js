@@ -3,7 +3,7 @@ import "../styles/panier.css";
 import { useCart } from "../contexte/CartContext";
 
 function Panier() {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
 
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.Prix * item.quantity,
@@ -31,21 +31,42 @@ function Panier() {
           </li>
         </ul>
         {cartItems.length > 0 ? (
-          cartItems.map((item) => (
-            <ul key={item.id_produit} className="liste-panier">
-              <li>{item.Nom}</li>
-              <li>{item.quantity}</li>
-              <li>{(item.Prix * item.quantity).toFixed(2)} €</li>
-              <li>
-                <button
-                  className="panier-b"
-                  onClick={() => removeFromCart(item.id_produit)}
-                >
-                  ❌
-                </button>
-              </li>
-            </ul>
-          ))
+          cartItems.map((item) => {
+            if (item.quantity < 1) removeFromCart(item.id_produit);
+            return (
+              <ul key={item.id_produit} className="liste-panier">
+                <li>{item.Nom}</li>
+                <li>
+                  <button
+                    className="panier-b"
+                    onClick={() =>
+                      updateQuantity(item.id_produit, item.quantity - 1)
+                    }
+                  >
+                    ➖
+                  </button>
+                  {item.quantity}
+                  <button
+                    className="panier-b"
+                    onClick={() =>
+                      updateQuantity(item.id_produit, item.quantity + 1)
+                    }
+                  >
+                    ➕
+                  </button>
+                </li>
+                <li>{(item.Prix * item.quantity).toFixed(2)} €</li>
+                <li>
+                  <button
+                    className="panier-b"
+                    onClick={() => removeFromCart(item.id_produit)}
+                  >
+                    ❌
+                  </button>
+                </li>
+              </ul>
+            );
+          })
         ) : (
           <p>
             <b>Votre panier est vide.</b>
@@ -59,7 +80,7 @@ function Panier() {
         <button className="panier-add">Ajouter un Article</button>
       </a>
       <a href="/Paiement">
-        <button className="suivant">Suivant -></button>
+        <button className="suivant">Suivant -&gt;</button>
       </a>
     </div>
   );

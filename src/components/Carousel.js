@@ -46,7 +46,7 @@ const Carousel = () => {
       <div className="carousel-slide">
         <div className="carousel-content">
           <h3>{title}</h3>
-          <img src={image} alt={`Slide ${currentIndex}`} />
+          <img src={image} alt={`Slide ${currentIndex} Produit populaire`} />
           <Link to={link} className="carousel-button">
             {button}
           </Link>

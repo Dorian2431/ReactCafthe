@@ -34,72 +34,79 @@ function Newcompte(props) {
       </div>
       <h2>Crée un Compte</h2>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: 10 }}>
-          <br />
+        <div className="New-tout">
+          <div style={{ marginBottom: 10 }}>
+            <br />
+          </div>
+          <div className="New-champs">
+            <label htmlFor="nom">Prénom </label>
+            <br></br>
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              placeholder="Prenom"
+              value={prenom}
+              onChange={(e) => setPrenom(e.target.value)}
+              required
+            />
+          </div>
+          <div className="New-champs">
+            <label htmlFor="nom">Nom </label>
+            <br></br>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Nom"
+              value={nom}
+              onChange={(e) => setNom(e.target.value)}
+              required
+            />
+          </div>
+          <div className="New-champs">
+            <label htmlFor="nom">Email </label>
+            <br></br>
+            <input
+              type="mail"
+              id="mail"
+              name="mail"
+              placeholder="Adresse E-mail"
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="New-champs">
+            <label htmlFor="nom">Mot de passe </label>
+            <br></br>
+            <input
+              type="text"
+              id="mdp"
+              name="mdp"
+              placeholder="Mot de passe"
+              value={mdp}
+              onChange={(e) => setMdp(e.target.value)}
+              required
+            />
+          </div>
+          <div className="New-champs">
+            <label htmlFor="nom">Adresse </label>
+            <br></br>
+            <input
+              type="text"
+              id="adresse"
+              name="adresse"
+              placeholder="Adresse"
+              value={adresse}
+              onChange={(e) => setAdresse(e.target.value)}
+              required
+            />
+          </div>
+          <button className="bouton" type="submit">
+            <b> Crée un Compte </b>
+          </button>
         </div>
-        <div>
-          <label htmlFor="nom">Prénom : </label>
-          <input
-            type="text"
-            id="prenom"
-            name="prenom"
-            placeholder="Prenom"
-            value={prenom}
-            onChange={(e) => setPrenom(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="nom">Nom : </label>
-          <input
-            type="text"
-            id="nom"
-            name="nom"
-            placeholder="Nom"
-            value={nom}
-            onChange={(e) => setNom(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="nom">Email : </label>
-          <input
-            type="mail"
-            id="mail"
-            name="mail"
-            placeholder="Adresse E-mail"
-            value={mail}
-            onChange={(e) => setMail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="nom">Mot de passe : </label>
-          <input
-            type="text"
-            id="mdp"
-            name="mdp"
-            placeholder="Mot de passe"
-            value={mdp}
-            onChange={(e) => setMdp(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="nom">Adresse : </label>
-          <input
-            type="text"
-            id="adresse"
-            name="adresse"
-            placeholder="Adresse"
-            value={adresse}
-            onChange={(e) => setAdresse(e.target.value)}
-            required
-          />
-        </div>
-        <button className="bouton" type="submit">
-          <b> Crée un Compte </b>
-        </button>
       </form>
       <a className="mdp" href="/login">
         &lt;- Page de connexion

@@ -8,11 +8,21 @@ function Motdepasse(props) {
         <img src={"/logoco.png"} alt="Description de l'image" />
       </div>
       <div className="mdp-titre">
-        <h2>Changer le Mot de passe</h2>
+        <h2>Première Connexion</h2>
       </div>
       <form>
         <div style={{ marginBottom: 10 }}>
           <br />
+          <div>
+            <label htmlFor="nom">Email : </label>
+            <input
+              type="text"
+              id="ancien mdp"
+              name="ancien mdp"
+              placeholder="Ancien Mot de passe"
+              required
+            />
+          </div>
           <div>
             <label htmlFor="nom">Ancien mot de passe : </label>
             <input
@@ -35,7 +45,7 @@ function Motdepasse(props) {
           </div>
         </div>
         <button className="bouton2" type="submit">
-          <b> Crée un Compte </b>
+          <b> Se connecter </b>
         </button>
       </form>
       <a className="mdp2" href="/login">

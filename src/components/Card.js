@@ -13,7 +13,7 @@ function Card({ produit }) {
       />
       <div className="information">
         <h3>{produit.Nom}</h3>
-        <p>{produit.Prix}</p>
+        <p>{produit.Prix} €</p>
         <Link to={`/produit/${produit.id_produit}`} className="details-btn">
           <b> Voir détails</b>
         </Link>

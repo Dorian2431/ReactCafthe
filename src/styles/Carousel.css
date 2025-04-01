@@ -3,33 +3,25 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 30%;
+    width: 40%;
     margin: auto;
 }
 
 .carousel-slide {
     width: 300px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     background-color: #EAE4DA;
     border-radius: 15px;
     padding: 20px;
-    text-align: center;
-    overflow: hidden;
     box-shadow: 1px 5px 1px #2c3e50;
-    align-items: center;
 }
 
 .carousel-content {
     display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centre le texte et les éléments */
-    gap: 20px; /* Ajoute de l'espace entre les éléments */
+    text-align: center;
+    gap: 20px;
 }
 
 .carousel-slide img {

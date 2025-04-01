@@ -6,9 +6,10 @@ import "../styles/ProductDetails.css";
 
 function ProductDetails() {
   const { id } = useParams();
-  const [detail, setDetail] = useState(null);
-  const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
+  const [detail, setDetail] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+  const [confirmation, setConfirmation] = useState("");
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -18,13 +19,17 @@ function ProductDetails() {
         );
         setDetail(response.data);
       } catch (error) {
-        console.error("Erreur lors de la récupération du produit", error);
+        console.error("Erreur de récupération du produit", error);
       }
     };
     fetchDetail();
   }, [id]);
 
-  if (!detail) return <p>Chargement...</p>;
+  const handleAddToCart = () => {
+    addToCart({ ...detail, quantity: parseInt(quantity, 10) });
+    setConfirmation("Produit ajouté au panier ✅");
+    setTimeout(() => setConfirmation(""), 2000);
+  };
 
   return (
     <div>
@@ -42,7 +47,7 @@ function ProductDetails() {
             <label>Quantité :</label>
             <select
               value={quantity}
-              onChange={(e) => setQuantity(parseInt(e.target.value))}
+              onChange={(e) => setQuantity(e.target.value)}
             >
               {[...Array(detail.Stock).keys()].map((num) => (
                 <option key={num + 1} value={num + 1}>
@@ -51,12 +56,10 @@ function ProductDetails() {
               ))}
             </select>
           </div>
-          <button
-            className="add-panier"
-            onClick={() => addToCart({ ...detail, quantity })}
-          >
+          <button className="add-panier" onClick={handleAddToCart}>
             Ajouter au Panier
           </button>
+          {confirmation && <p className="confirmation-msg">{confirmation}</p>}
         </div>
         <div className="droite">
           <h2 className="titre-d">{detail.Nom}</h2>
@@ -73,8 +76,8 @@ function ProductDetails() {
           </div>
         </div>
       </div>
-      <a href="/" className="retour-accueil">
-        <button className="panier-add">&lt; Page d'accueil</button>
+      <a href="/">
+        <button className="panier-add">&lt;- Accueil</button>
       </a>
     </div>
   );

@@ -6,7 +6,10 @@ function Recap(props) {
       <div className="panier-t">
         <h2>Récapitulatif</h2>
       </div>
-      <a href="/Recap">
+      <a href="/paiement">
+        <button className="panier-add">&lt;- Retour</button>
+      </a>
+      <a href="/">
         <button className="suivant">Payer -></button>
       </a>
     </div>

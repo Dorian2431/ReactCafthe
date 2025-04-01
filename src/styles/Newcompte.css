@@ -1,48 +1,113 @@
+/* Général */
 .pagedeco {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Couleur de fond plus douce */
+    border-radius: 12px; /* Coins arrondis plus subtils */
+    padding: 40px 30px; /* Plus de padding pour aérer le contenu */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre plus marquée pour donner de la profondeur */
     text-align: center;
+    max-width: 400px; /* Limite la largeur pour ne pas trop étirer le formulaire */
+    margin: 100px auto; /* Centre le formulaire sur la page */
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    width: 50%;
-    overflow: hidden;
-    position: relative; /* IMPORTANT : Permet au logo de se positionner correctement */
 }
 
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
 
 .logo-container img {
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 100px; /* Ajuste la taille du logo */
+    width: 100px;
     height: auto;
 }
 
-.mdp {
-    margin-right: 80px;
+/* Style du titre */
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-.texte {
+/* Champs du formulaire */
+.New-champs {
+    margin-bottom: 20px; /* Plus d'espace entre les champs */
+    text-align: left; /* Alignement à gauche des champs pour plus de lisibilité */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.New-champs label {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: -15px;
+}
+
+/* Champs de saisie */
+.New-champs input {
+    width: 100%;
+    padding: 10px;
     margin-top: 5px;
-    height: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
+.New-champs input:focus {
+    border-color: #6a5acd; /* Bordure violet lors du focus */
+    box-shadow: 0 0 8px rgba(106, 90, 205, 0.3); /* Ombre subtile au focus */
+    outline: none;
+}
+
+/* Bouton */
 .bouton {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 130px;
-    height: 30px;
+    width: 100%;
+    padding: 7px;
+    background-color: #5C8D48; /* Couleur de fond moderne */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: #1dc200; /* Légère teinte plus foncée au survol */
+}
+
+.bouton:active {
+    background-color: #4e3b9a; /* Teinte encore plus foncée au clic */
+}
+
+/* Lien mot de passe */
+.mdp {
+    display: block;
+    margin-top: 15px;
+    color: #6a5acd;
+    font-size: 15px;
+    text-align: center;
 }
 
 .mdp:hover {
-    color: #a905ff;
+    color: #4e3b9a;
 }
 
-.compte:hover {
-    color: #a905ff;
+/* Ajout d'un peu d'espace au bas de la page */
+.texte {
+    margin-top: 10px;
+}
+
+/* Pour les petits écrans */
+@media (max-width: 500px) {
+    .pagedeco {
+        width: 90%; /* Ajuste la taille du formulaire sur les petits écrans */
+        padding: 30px;
+    }
 }

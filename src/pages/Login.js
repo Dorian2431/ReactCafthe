@@ -85,8 +85,8 @@ function Login(props) {
           <b> Se connecter </b>
         </button>
       </form>
-      <a className="mdp" href="/Motdepasse">
-        Mot de passe oublié
+      <a className="mdpc" href="/Motdepasse">
+        Première connexion
       </a>
       <a className="compte" href="/Newcompte">
         Crée un compte
